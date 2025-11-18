@@ -22,15 +22,20 @@ public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String title;
     private String description;
+
     @Enumerated(EnumType.STRING)
     private Priority priority;
+
     private boolean completed;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     @JsonIgnore
     private User user;
+
     private LocalDateTime dueDate;
 
     @CreatedDate
