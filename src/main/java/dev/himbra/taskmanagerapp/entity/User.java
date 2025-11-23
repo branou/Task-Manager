@@ -2,8 +2,7 @@ package dev.himbra.taskmanagerapp.entity;
 
 import dev.himbra.taskmanagerapp.enums.Role;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
@@ -15,6 +14,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter @Setter @Builder
 @Entity
 @Table(name = "users")
 public class User {
